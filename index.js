@@ -15,6 +15,7 @@ module.exports = {
         "plugin:@typescript-eslint/recommended",
         "prettier",
     ],
+	ignorePatterns: ["**/integration-tests/*.ts"],
     rules: {
         "no-duplicate-imports": 1,
         "@typescript-eslint/no-unused-vars": [
@@ -24,7 +25,21 @@ module.exports = {
                 argsIgnorePattern: "^_",
             },
         ],
-		"max-lines": ["error", { "max": 500, "skipBlankLines": true, "skipComments": true }],
-		"max-lines-per-function": ["error", { "max": 50, "skipBlankLines": true, "skipComments": true }],
     },
+    overrides: [
+        {
+            files: ["**/*.ts"],
+            excludedFiles: "**/*.test.ts",
+            rules: {
+                "max-lines": [
+                    "error",
+                    { max: 500, skipBlankLines: true, skipComments: true },
+                ],
+                "max-lines-per-function": [
+                    "error",
+                    { max: 50, skipBlankLines: true, skipComments: true },
+                ],
+            },
+        },
+    ],
 };
