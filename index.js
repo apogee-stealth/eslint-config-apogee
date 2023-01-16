@@ -15,7 +15,7 @@ module.exports = {
         "plugin:@typescript-eslint/recommended",
         "prettier",
     ],
-	ignorePatterns: ["**/integration-tests/*.ts"],
+	ignorePatterns: ["**/integration-tests/*.ts", "**/test-fixture/*.ts"],
     rules: {
         "no-duplicate-imports": 1,
         "@typescript-eslint/no-unused-vars": [
