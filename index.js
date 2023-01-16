@@ -24,5 +24,7 @@ module.exports = {
                 argsIgnorePattern: "^_",
             },
         ],
+		"max-lines": ["error", { "max": 500, "skipBlankLines": true, "skipComments": true }],
+		"max-lines-per-function": ["error", { "max": 50, "skipBlankLines": true, "skipComments": true }],
     },
 };
