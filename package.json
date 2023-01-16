@@ -1,0 +1,34 @@
+{
+  "name": "@apogeelabs/eslint-config",
+  "version": "1.0.0",
+  "description": "This package provides Apogee's .eslintrc as an extensible shared config",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apogee-stealth/eslint-config-apogee.git"
+  },
+  "keywords": [
+    "lint",
+    "eslint"
+  ],
+  "author": "Apogee Travel",
+  "contributors": [
+    { "name": "Jim Cowart"}
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apogee-stealth/eslint-config-apogee/issues"
+  },
+  "homepage": "https://github.com/apogee-stealth/eslint-config-apogee#readme",
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "@typescript-eslint/parser": "^5.48.2",
+    "eslint": "^8.32.0"
+  }
+}
