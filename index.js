@@ -41,5 +41,19 @@ module.exports = {
                 ],
             },
         },
+        {
+            files: ["**/*.tsx"],
+            excludedFiles: "**/*.test.tsx",
+            rules: {
+                "max-lines": [
+                    "error",
+                    { max: 500, skipBlankLines: true, skipComments: true },
+                ],
+                "max-lines-per-function": [
+                    "error",
+                    { max: 75, skipBlankLines: true, skipComments: true },
+                ],
+            },
+        },
     ],
 };
