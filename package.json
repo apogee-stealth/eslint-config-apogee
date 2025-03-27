@@ -1,34 +1,53 @@
 {
-  "name": "@apogeelabs/eslint-config",
-  "version": "1.2.0",
-  "description": "This package provides Apogee's .eslintrc as an extensible shared config",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/apogee-stealth/eslint-config-apogee.git"
-  },
-  "keywords": [
-    "lint",
-    "eslint"
-  ],
-  "author": "Apogee Travel",
-  "contributors": [
-    { "name": "Jim Cowart"}
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/apogee-stealth/eslint-config-apogee/issues"
-  },
-  "homepage": "https://github.com/apogee-stealth/eslint-config-apogee#readme",
-  "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.48.2",
-    "@typescript-eslint/parser": "^5.48.2",
-    "eslint": "^8.32.0"
-  }
+	"name": "@apogeelabs/eslint-config",
+	"version": "2.1.0",
+	"description": "eslint9 flat configuration base for Apogee projects",
+	"keywords": [
+		"eslint",
+		"lint"
+	],
+	"homepage": "https://github.com/apogee-stealth/eslint-config-apogee#readme",
+	"bugs": {
+		"url": "https://github.com/apogee-stealth/eslint-config-apogee/issues"
+	},
+	"license": "MIT",
+	"author": "Apogee Travel",
+	"contributors": [
+		{
+			"name": "Jim Cowart"
+		},
+		{
+			"name": "Nicholas Cloud"
+		}
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/apogee-stealth/eslint-config-apogee.git"
+	},
+	"scripts": {
+		"build": "npx tsc",
+		"prepublishOnly": "npm run build"
+	},
+	"devDependencies": {
+		"@types/node": "^22.13.14",
+		"eslint": "^9.23.0",
+		"eslint-config-prettier": "^10.1.1",
+		"eslint-plugin-prettier": "^5.2.5",
+		"prettier": "^3.5.3",
+		"typescript": "^5.7.3",
+		"typescript-eslint": "^8.28.0"
+	},
+	"peerDependencies": {
+		"eslint": "^9.23.0",
+		"eslint-config-prettier": "^10.1.1",
+		"eslint-plugin-prettier": "^5.2.5",
+		"typescript": "^5.7.3",
+		"typescript-eslint": "^8.28.0"
+	},
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org/"
+	},
+	"type": "module",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts"
 }
