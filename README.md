@@ -10,17 +10,13 @@ To use this configuration:
 - install this package: `npm install --save-dev @apogeelabs/eslint-config`
 - create an eslint.config.js file in your prjoect that uses the Apogee config:
 
-```ts
-import { fileURLToPath } from "url";
-import { dirname } from "path";
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-import globals from "globals";
-import apogeeConfig from "@apogeelabs/eslint-config";
+```js
+const globals = require("globals");
+const apogeeConfig = require("@apogeelabs/eslint-config").default;
 
-export default [
+module.exports = [
     {
-        ignores: [ /* project-specific ignores */ ],
+        ignores: ["eslint.config.js", "jest.config.ts"],
     },
     {
         languageOptions: {
